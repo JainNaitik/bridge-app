@@ -192,13 +192,13 @@ export default function LoginPage() {
                                             InputProps={{
                                                 startAdornment: (
                                                     <InputAdornment position="start">
-                                                        <PersonIcon sx={{ color: "rgba(255,255,255,0.3)" }} />
+                                                        <PersonIcon sx={{ color: "var(--text-secondary)" }} />
                                                     </InputAdornment>
                                                 ),
                                             }}
                                             sx={inputStyle}
                                         />
-                                        <Typography sx={{ color: "rgba(255,255,255,0.5)", mt: 2, mb: 1, fontSize: "0.85rem", ml: 1 }}>
+                                        <Typography sx={{ color: "var(--text-secondary)", mt: 2, mb: 1, fontSize: "0.85rem", ml: 1 }}>
                                             Security Question: <strong>Which city were you born in?</strong>
                                         </Typography>
                                         <TextField
@@ -210,7 +210,7 @@ export default function LoginPage() {
                                             InputProps={{
                                                 startAdornment: (
                                                     <InputAdornment position="start">
-                                                        <SecurityIcon sx={{ color: "rgba(255,255,255,0.3)" }} />
+                                                        <SecurityIcon sx={{ color: "var(--text-secondary)" }} />
                                                     </InputAdornment>
                                                 ),
                                             }}
@@ -230,7 +230,7 @@ export default function LoginPage() {
                                     InputProps={{
                                         startAdornment: (
                                             <InputAdornment position="start">
-                                                <EmailIcon sx={{ color: "rgba(255,255,255,0.3)" }} />
+                                                <EmailIcon sx={{ color: "var(--text-secondary)" }} />
                                             </InputAdornment>
                                         ),
                                     }}
@@ -241,7 +241,7 @@ export default function LoginPage() {
                             {mode === "QUESTION" && (
                                 <Fade in={true}>
                                     <Box>
-                                        <Typography sx={{ color: "white", mb: 2, textAlign: "center" }}>
+                                        <Typography sx={{ color: "var(--text-primary)", mb: 2, textAlign: "center" }}>
                                             Security Question: <br /><strong>Which city were you born in?</strong>
                                         </Typography>
                                         <TextField
@@ -253,7 +253,7 @@ export default function LoginPage() {
                                             InputProps={{
                                                 startAdornment: (
                                                     <InputAdornment position="start">
-                                                        <SecurityIcon sx={{ color: "rgba(255,255,255,0.3)" }} />
+                                                        <SecurityIcon sx={{ color: "var(--text-secondary)" }} />
                                                     </InputAdornment>
                                                 ),
                                             }}
