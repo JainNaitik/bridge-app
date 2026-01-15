@@ -251,12 +251,17 @@ app.delete("/api/history/:id", async (req, res) => {
 });
 
 // Production Setup
+// Production Setup
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 if (process.env.NODE_ENV === "production") {
-  const __dirname = path.resolve();
+  console.log("Serving static files from:", path.join(__dirname, "../frontend/dist"));
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
   });
 }
 
