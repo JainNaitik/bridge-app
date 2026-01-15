@@ -215,7 +215,11 @@ app.get(
   "/auth/google/callback",
   passport.authenticate("google"),
   (req, res) => {
-    res.redirect("http://localhost:5173/dashboard");
+    if (process.env.NODE_ENV === "production") {
+      res.redirect("/dashboard");
+    } else {
+      res.redirect("http://localhost:5173/dashboard");
+    }
   }
 );
 
