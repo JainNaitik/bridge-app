@@ -29,7 +29,7 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+    const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:5001" : "");
 
     const handleAuth = async (e) => {
         e.preventDefault();
@@ -353,7 +353,7 @@ export default function LoginPage() {
                                     fullWidth
                                     variant="outlined"
                                     startIcon={<GoogleIcon />}
-                                    href="http://localhost:5001/auth/google"
+                                    href={`${API_URL}/auth/google`}
                                     sx={{
                                         py: 1.5,
                                         borderRadius: 3,

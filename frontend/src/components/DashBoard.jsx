@@ -53,7 +53,7 @@ export default function Dashboard() {
   const { speak, cancel, isSpeaking } = useTextToSpeech();
   const { startListening, stopListening, isListening } = useSpeechToText();
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+  const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:5001" : "");
 
   useEffect(() => {
     fetch(`${API_URL}/api/current_user`, { credentials: "include" })

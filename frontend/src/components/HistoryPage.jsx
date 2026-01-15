@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
 export default function HistoryPage() {
     const [summaries, setSummaries] = useState([]);
     const navigate = useNavigate();
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+    const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:5001" : "");
 
     return (
         <Box
